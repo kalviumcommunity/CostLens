@@ -136,6 +136,20 @@ Flags unexpected spikes before they escalate.
 
 ---
 
+## Team Workflow
+
+Issue
+↓
+Feature Branch
+↓
+Development
+↓
+Pull Request
+↓
+Review
+↓
+Merge
+
 ## 🚀 Getting Started
 
 ```bash
