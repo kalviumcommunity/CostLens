@@ -1,0 +1,37 @@
+# Python environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache & compiled code
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment configuration
+.env
+.env.*
+
+# IDEs & System files
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Jupyter Notebook check points
+.ipynb_checkpoints/
+
+# Data outputs & logs
+outputs/reports/*
+outputs/charts/*
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/reports/.gitkeep
+!outputs/charts/.gitkeep
