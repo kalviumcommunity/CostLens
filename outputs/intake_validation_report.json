@@ -1,0 +1,32 @@
+{
+  "file_name": "cloud_cost_sample.csv",
+  "file_path": "data/raw/cloud_cost_sample.csv",
+  "file_size_bytes": 1333,
+  "row_count": 20,
+  "column_count": 5,
+  "encoding": "utf-8",
+  "expected_columns": [
+    "timestamp",
+    "service_name",
+    "environment",
+    "cost_usd",
+    "deployment_id"
+  ],
+  "actual_columns": [
+    "timestamp",
+    "service_name",
+    "environment",
+    "cost_usd",
+    "deployment_id"
+  ],
+  "missing_columns": [],
+  "extra_columns": [],
+  "file_checks": {
+    "file_exists": true,
+    "file_non_empty": true,
+    "valid_csv": true,
+    "error": null
+  },
+  "validation_status": "PASS",
+  "validation_timestamp": "2026-06-30T04:39:35.035550+00:00"
+}
