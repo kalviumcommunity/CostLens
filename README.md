@@ -166,6 +166,65 @@ streamlit run app.py
 
 ---
 
+## ✅ LU-04 Dataset Intake & Source Validation
+
+### Objective
+
+Validate every incoming dataset **before** any cleaning or analysis occurs, so
+bad files never enter the pipeline. The workflow inspects the raw file, confirms
+it matches the expected schema, detects its encoding, and produces a structured,
+auditable report.
+
+### Validation Checks
+
+| Stage | Check |
+|---|---|
+| **File** | File exists · file is non-empty · parses as valid CSV |
+| **Schema** | Actual columns compared to expected schema · detects **missing** & **extra** columns |
+| **Encoding** | Detects encoding (`chardet` when available) with a candidate-decode **fallback strategy** |
+| **Metadata** | File name · file size · row count · column count · detected encoding · validation timestamp |
+
+**Expected schema:** `timestamp`, `service_name`, `environment`, `cost_usd`, `deployment_id`
+
+### Run
+
+```bash
+python scripts/dataset_intake_validation.py
+```
+
+### Report Output
+
+A structured JSON report is written to `outputs/intake_validation_report.json`:
+
+```json
+{
+  "file_name": "cloud_cost_sample.csv",
+  "row_count": 20,
+  "column_count": 5,
+  "encoding": "utf-8",
+  "missing_columns": [],
+  "extra_columns": [],
+  "validation_status": "PASS"
+}
+```
+
+Terminal summary:
+
+```
+Dataset Intake Report
+---------------------
+Rows: 20
+Columns: 5
+Encoding: utf-8
+Schema Validation: PASS
+```
+
+- **Script:** `scripts/dataset_intake_validation.py`
+- **Sample dataset:** `data/raw/cloud_cost_sample.csv`
+- **Report:** `outputs/intake_validation_report.json`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend

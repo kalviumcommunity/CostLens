@@ -1,0 +1,21 @@
+timestamp,service_name,environment,cost_usd,deployment_id
+2026-01-01T00:00:00Z,Compute Engine,Production,1240.50,deploy-1001
+2026-01-01T06:00:00Z,Cloud Storage,Production,452.75,deploy-1001
+2026-01-01T12:00:00Z,BigQuery,Production,910.20,deploy-1002
+2026-01-02T00:00:00Z,Compute Engine,Staging,310.00,deploy-1003
+2026-01-02T06:00:00Z,Cloud SQL,Production,688.40,deploy-1002
+2026-01-02T12:00:00Z,Cloud Functions,Development,45.10,deploy-1004
+2026-01-03T00:00:00Z,Compute Engine,Production,1305.90,deploy-1005
+2026-01-03T06:00:00Z,Cloud Storage,Staging,120.30,deploy-1003
+2026-01-03T12:00:00Z,BigQuery,Production,975.65,deploy-1005
+2026-01-04T00:00:00Z,Cloud SQL,Production,702.10,deploy-1006
+2026-01-04T06:00:00Z,Cloud Functions,Development,52.80,deploy-1004
+2026-01-04T12:00:00Z,Compute Engine,Production,1411.25,deploy-1007
+2026-01-05T00:00:00Z,Cloud Storage,Production,478.90,deploy-1006
+2026-01-05T06:00:00Z,BigQuery,Staging,330.45,deploy-1008
+2026-01-05T12:00:00Z,Cloud SQL,Production,715.00,deploy-1007
+2026-01-06T00:00:00Z,Compute Engine,Development,98.60,deploy-1009
+2026-01-06T06:00:00Z,Cloud Functions,Production,61.25,deploy-1008
+2026-01-06T12:00:00Z,BigQuery,Production,1022.70,deploy-1010
+2026-01-07T00:00:00Z,Cloud Storage,Production,490.15,deploy-1009
+2026-01-07T06:00:00Z,Compute Engine,Production,1378.40,deploy-1010
