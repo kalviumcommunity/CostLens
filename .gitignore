@@ -39,3 +39,8 @@ data/processed/*
 # LU-04 Dataset Intake & Source Validation deliverables (tracked)
 !data/raw/cloud_cost_sample.csv
 !outputs/intake_validation_report.json
+
+# LU-06 Dataset Profiling & Quality Assessment deliverables (tracked)
+!data/raw/cloud_costs.csv
+!outputs/data_profile_report.json
+!outputs/data_quality_findings.md
