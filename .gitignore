@@ -39,3 +39,9 @@ data/processed/*
 # LU-04 Dataset Intake & Source Validation deliverables (tracked)
 !data/raw/cloud_cost_sample.csv
 !outputs/intake_validation_report.json
+
+# LU-05 CSV & JSON Data Ingestion deliverables (tracked)
+!data/raw/cloud_costs.csv
+!data/raw/cloud_deployments.json
+!outputs/cloud_costs_processed.csv
+!outputs/cloud_deployments_processed.csv

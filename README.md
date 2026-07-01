@@ -225,6 +225,54 @@ Schema Validation: PASS
 
 ---
 
+## ✅ LU-05 CSV & JSON Data Ingestion
+
+### Objective
+
+Import both **CSV** and **JSON** business datasets into Pandas DataFrames and
+prepare them for downstream analysis, including flattening nested JSON.
+
+### Ingestion Workflow
+
+1. **CSV loading** — `load_csv_data()` reads `data/raw/cloud_costs.csv` using
+   `pd.read_csv()` with **explicit** `encoding="utf-8"` and `delimiter=","`
+   (never relying on defaults).
+2. **JSON flattening** — `load_json_data()` reads nested
+   `data/raw/cloud_deployments.json` and flattens it with `pd.json_normalize(sep=".")`
+   so nested keys become dotted columns.
+3. **Summary** — `display_dataset_summary()` prints shape, columns, dtypes and
+   the first 5 rows for each dataset.
+4. **Export** — processed DataFrames written to `outputs/`.
+
+### JSON Flattening
+
+Nested structure → flat columns:
+
+| Nested key | Flattened column |
+|---|---|
+| `deployment_id` | `deployment_id` |
+| `service.name` | `service.name` |
+| `service.environment` | `service.environment` |
+| `metrics.cpu_usage` | `metrics.cpu_usage` |
+| `metrics.memory_usage` | `metrics.memory_usage` |
+
+### Run
+
+```bash
+python scripts/data_ingestion.py
+```
+
+### Generated Outputs
+
+- `outputs/cloud_costs_processed.csv`
+- `outputs/cloud_deployments_processed.csv`
+
+- **Script:** `scripts/data_ingestion.py`
+- **CSV source:** `data/raw/cloud_costs.csv` (22 records)
+- **JSON source:** `data/raw/cloud_deployments.json` (12 nested records)
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
