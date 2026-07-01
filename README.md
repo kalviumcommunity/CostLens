@@ -225,6 +225,55 @@ Schema Validation: PASS
 
 ---
 
+## ✅ LU-06 Dataset Profiling & Quality Assessment
+
+### Objective
+
+Profile `data/raw/cloud_costs.csv` and produce a structured quality assessment
+**before** any cleaning or transformation, establishing a known quality baseline.
+
+### Profiling Workflow
+
+1. **load_dataset()** — read the raw CSV (explicit utf-8 / comma).
+2. **profile_dataset()** — overview, null, duplicate and unique analysis.
+3. **profile_numerical_columns()** — min, max, mean, median, std dev.
+4. **profile_categorical_columns()** — unique count, top 5, frequency distribution.
+5. **generate_quality_findings()** — auto-detect issues + proposed fixes.
+6. **save_report()** — write JSON profile + Markdown findings.
+
+### Quality Metrics Generated
+
+| Category | Metrics |
+|---|---|
+| Overview | row count, column count, names, dtypes |
+| Null analysis | per-column null count & percentage |
+| Duplicate analysis | duplicate row count/%, duplicate key records |
+| Unique analysis | per-column unique value count |
+| Numerical | min, max, mean, median, std dev |
+| Categorical | unique count, top 5, frequency distribution |
+
+### Findings Report
+
+`generate_quality_findings()` auto-detects: missing values, duplicate rows,
+duplicate deployment records, inconsistent categories (case/whitespace) and
+numeric outliers (IQR), each with a proposed fix, written to
+`outputs/data_quality_findings.md`.
+
+### Run
+
+```bash
+python scripts/dataset_profiling.py
+```
+
+### Generated Outputs
+
+- `outputs/data_profile_report.json` — structured profiling report
+- `outputs/data_quality_findings.md` — issues + proposed fixes
+
+- **Script:** `scripts/dataset_profiling.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
