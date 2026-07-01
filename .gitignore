@@ -40,7 +40,14 @@ data/processed/*
 !data/raw/cloud_cost_sample.csv
 !outputs/intake_validation_report.json
 
+
 # LU-06 Dataset Profiling & Quality Assessment deliverables (tracked)
 !data/raw/cloud_costs.csv
 !outputs/data_profile_report.json
 !outputs/data_quality_findings.md
+# LU-05 CSV & JSON Data Ingestion deliverables (tracked)
+!data/raw/cloud_costs.csv
+!data/raw/cloud_deployments.json
+!outputs/cloud_costs_processed.csv
+!outputs/cloud_deployments_processed.csv
+

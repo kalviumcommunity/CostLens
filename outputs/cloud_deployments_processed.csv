@@ -1,0 +1,13 @@
+deployment_id,service.name,service.environment,metrics.cpu_usage,metrics.memory_usage
+DEP001,Compute Engine,Production,76,62
+DEP002,BigQuery,Production,58,71
+DEP003,Compute Engine,Staging,33,40
+DEP004,Cloud Functions,Development,21,28
+DEP005,BigQuery,Production,82,77
+DEP006,Cloud SQL,Production,64,69
+DEP007,Compute Engine,Production,88,74
+DEP008,Cloud Functions,Production,45,52
+DEP009,Compute Engine,Development,19,25
+DEP010,BigQuery,Production,91,85
+DEP011,Cloud Storage,Production,37,44
+DEP012,Cloud SQL,Staging,29,33
