@@ -1,0 +1,9 @@
+Column,Nulls Before,Nulls After
+Deployment_ID,0,0
+Deployment_Date,3,0
+Team_Name,3,0
+Environment,2,0
+Service_Name,0,0
+CPU_Usage,4,0
+Monthly_Cost,2,0
+Cost_Center,4,0
