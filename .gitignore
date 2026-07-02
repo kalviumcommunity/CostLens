@@ -45,6 +45,9 @@ data/processed/*
 !data/raw/cloud_costs.csv
 !outputs/data_profile_report.json
 !outputs/data_quality_findings.md
+
+# LU-07 Data Dictionary & Business Context Mapping deliverables (tracked)
+!outputs/data_dictionary.csv
 # LU-05 CSV & JSON Data Ingestion deliverables (tracked)
 !data/raw/cloud_costs.csv
 !data/raw/cloud_deployments.json
