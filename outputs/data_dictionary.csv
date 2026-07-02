@@ -1,0 +1,6 @@
+column_name,data_type,description,example_value,business_meaning
+timestamp,str,"Date and time (ISO 8601, UTC) the cost record was captured for a billing interval.",2026-01-01T00:00:00Z,"Anchors every cost to a point in time, enabling daily / monthly trend analysis and anomaly detection by Finance and Engineering."
+service_name,str,"Name of the cloud service that generated the charge (e.g. Compute Engine, BigQuery, Cloud Storage).",Compute Engine,Attributes spend to a specific managed service so teams can see which products drive the bill and target optimisation.
+environment,str,"Deployment environment the cost belongs to (Production, Staging, Development).",Production,Allocates spend across environments so non-production waste is visible and Production reliability spend is justified.
+cost_usd,float64,Cloud infrastructure cost in US dollars for the service and interval on this record.,1240.5,"Represents operational spending tracked by Finance and Engineering teams; the core measure for budgets, forecasts and cost KPIs."
+deployment_id,str,Unique identifier for the infrastructure deployment event associated with the cost.,DEP001,Links cloud spend back to a specific deployment so cost spikes can be traced to the change that caused them (root cause analysis).
