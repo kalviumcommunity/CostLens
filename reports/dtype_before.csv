@@ -1,0 +1,12 @@
+Column Name,Current Data Type
+Deployment_ID,str
+Deployment_Date,str
+Billing_Date,str
+Team_Name,str
+Environment,str
+Service_Name,str
+Monthly_Cost,str
+CPU_Utilization,str
+Auto_Scaling_Enabled,str
+Resource_Count,str
+Cost_Center,str

@@ -271,6 +271,63 @@ python scripts/missing_value_imputation.py
 
 ---
 
+## 🧮 LU09 Data Type Enforcement & Standardisation
+
+### Problem
+
+A cleaned dataset can still carry the wrong **types**: dates stored as text,
+costs like `$1,240.50`, utilisation like `85%`, and flags as `0/1`. Analysis,
+sorting and aggregation silently break until every column holds its correct
+type. This unit audits and enforces types before analysis.
+
+### Type Issues Found
+
+| Column | Raw Form | Problem |
+|---|---|---|
+| Deployment_Date, Billing_Date | `2026-01-01`, `01/01/2026` | Dates stored as strings |
+| Monthly_Cost | `$1,240.50`, `₹5600`, `€45.10` | Currency symbols + commas |
+| CPU_Utilization | `85%` | Percent sign blocks numeric ops |
+| Auto_Scaling_Enabled | `0` / `1` | Flags stored as text/int, not bool |
+| Resource_Count | `8` | Counts stored as string |
+
+### Conversion Logic
+
+| Category | Method |
+|---|---|
+| Date | `pd.to_datetime(..., format=..., errors="coerce")` |
+| Currency | strip `$ ₹ € £ ,` → `float` |
+| Percentage | strip `%` → `float` |
+| Boolean | map `0/1` → `bool` |
+| Integer | `pd.to_numeric` → nullable `Int64` |
+
+All conversions use `errors="coerce"`: unparseable values become `NaN`/`NaT`
+and are logged to `reports/conversion_errors.csv` rather than crashing the run.
+The input dataset is read-only; the result is saved separately.
+
+### Run
+
+```bash
+python scripts/data_type_standardisation.py
+```
+
+### Output Reports
+
+- `reports/dtype_before.csv` — column → current dtype
+- `reports/dtype_after.csv` — column → updated dtype
+- `reports/dtype_conversion_summary.csv` — before vs after
+- `reports/conversion_errors.csv` — rows that failed conversion
+- `data/processed/cloud_cost_dataset_standardized.csv` — standardised dataset
+- **Script:** `scripts/data_type_standardisation.py`
+
+### Key Learnings
+
+- Explicit date `format` prevents ambiguous/silent misparsing.
+- `errors="coerce"` + a failure log makes bad data visible, not fatal.
+- Nullable `Int64` and real `bool` types unlock correct sorting, filtering
+  and aggregation downstream.
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend

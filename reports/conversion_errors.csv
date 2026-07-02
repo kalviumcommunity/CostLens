@@ -1,0 +1,3 @@
+row_index,column,original_value,reason
+19,Billing_Date,32/13/2026,Could not parse to target type (coerced to NaN)
+17,CPU_Utilization,unknown,Could not parse to target type (coerced to NaN)
