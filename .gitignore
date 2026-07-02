@@ -52,6 +52,9 @@ data/processed/*
 # LU-08 Missing Value Detection & Imputation deliverables (tracked)
 !data/raw/cloud_cost_dataset.csv
 !data/processed/cloud_cost_dataset_cleaned.csv
+
+# LU-09 Data Type Enforcement & Standardisation deliverables (tracked)
+!data/processed/cloud_cost_dataset_standardized.csv
 # LU-05 CSV & JSON Data Ingestion deliverables (tracked)
 !data/raw/cloud_costs.csv
 !data/raw/cloud_deployments.json
