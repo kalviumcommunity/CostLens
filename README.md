@@ -165,6 +165,69 @@ streamlit run app.py
 ```
 
 
+## 📖 LU-07 Data Dictionary & Business Context Mapping
+
+### Objective
+
+Translate the technical schema of `data/raw/cloud_costs.csv` into business
+meaning, operational context, KPIs and stakeholder-friendly definitions so
+Finance and Engineering share one language for cloud spend.
+
+### Business Context Workflow
+
+1. **Read schema automatically** — `extract_schema()` captures each column's
+   name, data type and a representative sample value.
+2. **Map business context** — merge the schema with a human-authored
+   knowledge base (description + business meaning) into dictionary rows.
+3. **Attach KPIs** — link each column to the business KPI it powers.
+4. **Flag ambiguity** — surface columns stakeholders could misread.
+5. **Document relationships** — describe how columns relate for the business.
+6. **Export** — write `docs/data_dictionary.md` and
+   `outputs/data_dictionary.csv`.
+
+### KPI Mapping
+
+| Column | Mapped KPI |
+|---|---|
+| cost_usd | Monthly Cloud Cost KPI |
+| timestamp | Daily Cost Trend KPI |
+| deployment_id | Deployment Tracking KPI |
+| environment | Environment Cost Allocation KPI |
+| service_name | Service Cost Attribution KPI |
+
+Each KPI keeps analytics aligned with budgeting, trend detection, release
+accountability, environment allocation and service-level optimisation.
+
+### Ambiguous Field Analysis
+
+- **deployment_id** — read as an app release ID; actually the infrastructure
+  deployment event a cost is billed against.
+- **cost_usd** — read as the full invoice; actually one service/interval slice
+  that must be summed for totals.
+- **environment** — read as a cloud region; actually the software lifecycle
+  stage (Production / Staging / Development).
+
+### Relationship Mapping
+
+- `deployment_id ↔ cost_usd` — infrastructure cost per deployment (root cause).
+- `environment ↔ cost_usd` — spend differences across environments.
+- `service_name ↔ cost_usd` — each service's contribution to total spend.
+- `timestamp ↔ cost_usd` — spend evolution over time (trend KPIs).
+
+### Run
+
+```bash
+python scripts/generate_data_dictionary.py
+```
+
+### Generated Outputs
+
+- `docs/data_dictionary.md` — full business data dictionary
+- `outputs/data_dictionary.csv` — machine-readable column dictionary
+- **Script:** `scripts/generate_data_dictionary.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
