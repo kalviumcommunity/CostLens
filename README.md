@@ -228,6 +228,49 @@ python scripts/generate_data_dictionary.py
 
 ---
 
+## 🧩 LU08 Missing Value Detection & Imputation
+
+### Problem
+
+Real cloud billing exports arrive with gaps: missing costs, unlabelled teams,
+blank environments and absent cost centers. Left unhandled, these nulls break
+aggregations and skew KPIs. This unit detects missing values, imputes them with
+business-aware strategies, and preserves the raw source untouched.
+
+### Missing Value Report
+
+`missing_value_imputation.py` prints a per-column report of **Column Name,
+Data Type, Null Count and Null Percentage** for `data/raw/cloud_cost_dataset.csv`.
+
+### Imputation Strategy
+
+| Column(s) | Type | Method | Reason |
+|---|---|---|---|
+| Monthly_Cost, CPU_Usage | Numerical | Median | Robust to outliers vs mean |
+| Team_Name, Environment | Categorical | Mode | Most frequent value as default |
+| Deployment_Date | Time-series | Forward Fill | Carries last known date forward |
+| Cost_Center | Business rule | Constant `"Unknown"` | Cannot guess; flag for finance |
+
+Every decision (column, missing %, method, reason) is logged to
+`reports/imputation_decisions.md`. A before/after null comparison is written to
+`reports/null_comparison.csv`. The cleaned dataset is saved **separately** to
+`data/processed/cloud_cost_dataset_cleaned.csv` — the raw file is never modified.
+
+### Run
+
+```bash
+python scripts/missing_value_imputation.py
+```
+
+### Output Files
+
+- `reports/imputation_decisions.md` — decision log
+- `reports/null_comparison.csv` — nulls before vs after
+- `data/processed/cloud_cost_dataset_cleaned.csv` — cleaned dataset
+- **Script:** `scripts/missing_value_imputation.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
