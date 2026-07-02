@@ -1,0 +1,12 @@
+Column Name,Updated Data Type
+Deployment_ID,str
+Deployment_Date,datetime64[us]
+Billing_Date,datetime64[us]
+Team_Name,str
+Environment,str
+Service_Name,str
+Monthly_Cost,float64
+CPU_Utilization,float64
+Auto_Scaling_Enabled,bool
+Resource_Count,Int64
+Cost_Center,str

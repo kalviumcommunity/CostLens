@@ -1,0 +1,12 @@
+Column,Before,After
+Deployment_ID,str,str
+Deployment_Date,str,datetime64[us]
+Billing_Date,str,datetime64[us]
+Team_Name,str,str
+Environment,str,str
+Service_Name,str,str
+Monthly_Cost,str,float64
+CPU_Utilization,str,float64
+Auto_Scaling_Enabled,str,bool
+Resource_Count,str,Int64
+Cost_Center,str,str
