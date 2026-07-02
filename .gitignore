@@ -48,6 +48,10 @@ data/processed/*
 
 # LU-07 Data Dictionary & Business Context Mapping deliverables (tracked)
 !outputs/data_dictionary.csv
+
+# LU-08 Missing Value Detection & Imputation deliverables (tracked)
+!data/raw/cloud_cost_dataset.csv
+!data/processed/cloud_cost_dataset_cleaned.csv
 # LU-05 CSV & JSON Data Ingestion deliverables (tracked)
 !data/raw/cloud_costs.csv
 !data/raw/cloud_deployments.json

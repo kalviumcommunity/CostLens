@@ -1,0 +1,21 @@
+Deployment_ID,Deployment_Date,Team_Name,Environment,Service_Name,CPU_Usage,Monthly_Cost,Cost_Center
+DEP001,2026-01-01,Platform,Production,Compute Engine,72.5,1240.50,CC-1001
+DEP002,2026-01-01,Data,Production,BigQuery,,910.20,CC-1002
+DEP003,2026-01-02,Platform,Staging,Compute Engine,31.0,310.00,
+DEP004,2026-01-02,,Development,Cloud Functions,12.4,45.10,CC-1004
+DEP005,2026-01-03,Data,Production,BigQuery,88.1,,CC-1002
+DEP006,,Payments,Production,Cloud SQL,65.3,702.10,CC-1006
+DEP007,2026-01-04,Platform,,Compute Engine,91.7,1411.25,CC-1001
+DEP008,2026-01-05,Data,Staging,BigQuery,,330.45,
+DEP009,2026-01-06,,Development,Compute Engine,15.8,98.60,CC-1004
+DEP010,2026-01-06,Payments,Production,BigQuery,84.2,1022.70,CC-1006
+DEP011,2026-01-07,Platform,Production,Cloud Storage,,490.15,CC-1001
+DEP012,,Data,Production,Compute Engine,79.9,1378.40,CC-1002
+DEP013,2026-01-08,Payments,Staging,Cloud SQL,28.6,275.60,
+DEP014,2026-01-08,,Production,BigQuery,90.4,1050.85,CC-1004
+DEP015,2026-01-09,Platform,Development,Cloud Functions,9.7,,CC-1001
+DEP016,2026-01-09,Data,Production,Compute Engine,76.3,1305.90,CC-1002
+DEP017,2026-01-10,Payments,,Cloud Storage,44.1,452.75,CC-1006
+DEP018,,Platform,Staging,Compute Engine,,120.30,CC-1001
+DEP019,2026-01-11,Data,Production,Cloud SQL,68.8,688.40,
+DEP020,2026-01-11,Payments,Production,BigQuery,82.5,975.65,CC-1006
