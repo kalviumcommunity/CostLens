@@ -1,0 +1,21 @@
+Deployment_ID,Deployment_Date,Billing_Date,Team_Name,Environment,Service_Name,Monthly_Cost,CPU_Utilization,Auto_Scaling_Enabled,Resource_Count,Cost_Center
+DEP001,2026-01-01,2026-01-01,Platform,Production,Compute Engine,1240.5,72.0,True,8,CC-1001
+DEP002,2026-01-01,2026-01-01,Data,Production,BigQuery,910.2,71.0,False,4,CC-1002
+DEP003,2026-01-02,2026-01-02,Platform,Staging,Compute Engine,310.0,31.0,True,3,Unknown
+DEP004,2026-01-02,2026-01-02,Data,Development,Cloud Functions,45.1,12.0,False,1,CC-1004
+DEP005,2026-01-03,2026-01-03,Data,Production,BigQuery,1022.7,88.0,True,6,CC-1002
+DEP006,2026-01-06,2026-01-06,Payments,Production,Cloud SQL,702.1,65.0,True,5,CC-1006
+DEP007,2026-01-04,2026-01-04,Platform,Production,Compute Engine,1411.25,92.0,True,9,CC-1001
+DEP008,2026-01-05,2026-01-05,Data,Staging,BigQuery,330.45,71.0,False,3,Unknown
+DEP009,2026-01-06,2026-01-06,Data,Development,Compute Engine,98.6,16.0,False,1,CC-1004
+DEP010,2026-01-06,2026-01-06,Payments,Production,BigQuery,1022.7,84.0,True,7,CC-1006
+DEP011,2026-01-07,2026-01-07,Platform,Production,Cloud Storage,490.15,71.0,True,4,CC-1001
+DEP012,2026-01-06,2026-01-06,Data,Production,Compute Engine,1378.4,80.0,True,8,CC-1002
+DEP013,2026-01-08,2026-01-08,Payments,Staging,Cloud SQL,275.6,29.0,False,2,Unknown
+DEP014,2026-01-08,2026-01-08,Data,Production,BigQuery,1050.85,90.0,True,7,CC-1004
+DEP016,2026-01-09,2026-01-09,Data,Production,Compute Engine,1305.9,76.0,True,8,CC-1002
+DEP017,2026-01-10,2026-01-10,Payments,Production,Cloud Storage,5600.0,44.0,True,4,CC-1006
+DEP018,2026-01-07,2026-01-07,Platform,Staging,Compute Engine,120.3,,False,2,CC-1001
+DEP019,2026-01-11,2026-01-11,Data,Production,Cloud SQL,688.4,69.0,True,5,Unknown
+DEP015,2026-01-09,2026-01-09,Platform,Development,Cloud Functions,1500.0,10.0,False,1,CC-1001
+DEP020,2026-01-11,2026-01-11,Payments,Production,BigQuery,975.65,82.0,True,6,CC-1006
