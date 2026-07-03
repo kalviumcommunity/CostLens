@@ -55,6 +55,9 @@ data/processed/*
 
 # LU-09 Data Type Enforcement & Standardisation deliverables (tracked)
 !data/processed/cloud_cost_dataset_standardized.csv
+
+# LU-10 Duplicate Detection & Record Deduplication deliverables (tracked)
+!data/processed/cloud_cost_dataset_deduplicated.csv
 # LU-05 CSV & JSON Data Ingestion deliverables (tracked)
 !data/raw/cloud_costs.csv
 !data/raw/cloud_deployments.json
