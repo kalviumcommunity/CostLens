@@ -328,6 +328,65 @@ python scripts/data_type_standardisation.py
 
 ---
 
+## 🧹 LU10 Duplicate Detection & Record Deduplication
+
+### Problem
+
+Billing exports and merged sources introduce duplicate rows — both exact
+copies and "near" duplicates (the same deployment re-ingested with an updated
+cost or a later billing date). Blind removal risks deleting the *better* copy,
+so we detect, choose which record to keep, and log everything removed.
+
+### Exact vs Near Duplicates
+
+- **Exact duplicate** — every column identical (a full-row copy).
+  Detected with `df.duplicated(keep="first")`.
+- **Near duplicate** — same logical entity (`Deployment_ID`) appearing more
+  than once with differing details, e.g. `DEP015` with a missing cost vs the
+  same ID with the cost populated.
+
+### Deduplication Logic
+
+| Stage | Rule |
+|---|---|
+| Exact | `df.duplicated(keep="first")` — keep the first occurrence |
+| Near | Group by `Deployment_ID`; keep the **most complete** record (fewest nulls), ties broken by most recent `Billing_Date` |
+
+The `keep` parameter controls which occurrence is *retained*: `"first"` keeps
+the earliest, `"last"` keeps the latest, and `False` marks **all** duplicates.
+
+### Audit Trail
+
+Every removed record is written to `reports/removed_duplicates.csv` with its
+`duplicate_type` (exact/near) and `removal_reason`. Row counts before and after
+are documented in `reports/deduplication_summary.md`. The input dataset is never
+modified — the result is saved to a new file.
+
+### Run
+
+```bash
+python scripts/duplicate_deduplication.py
+```
+
+### Output Reports
+
+- `reports/removed_duplicates.csv` — audit log of every removed record
+- `reports/deduplication_summary.md` — before/after counts + policy
+- `data/processed/cloud_cost_dataset_deduplicated.csv` — deduplicated dataset
+- **Script:** `scripts/duplicate_deduplication.py`
+
+### Key Learnings
+
+- Exact dedup is a full-row match; near dedup needs a chosen **key column**
+  combination that defines one entity.
+- Choosing *which* record to keep (completeness/recency) matters more than the
+  removal itself.
+- Logging removed rows gives an auditable trail and prevents silent data loss.
+- Slight spelling variations (e.g. `Prod` vs `Production`) need normalisation
+  or fuzzy matching before key-based dedup will catch them.
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
