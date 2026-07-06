@@ -1,0 +1,21 @@
+Deployment_ID,Deployment_Date,Team_Name,Environment,Service_Name,CPU_Usage,Monthly_Cost,Cost_Center,deployment_year,deployment_month,deployment_week,deployment_day_of_week,deployment_hour,days_since_deployment,Monthly_Cost_outlier_flag,CPU_Usage_outlier_flag
+Dep001,2026-01-01,Platform,Production,Compute Engine,72.5,1240.5,Cc-1001,2026,1,1,Thursday,0,186,0,0
+Dep002,2026-01-01,Data,Production,Bigquery,70.65,910.2,Cc-1002,2026,1,1,Thursday,0,186,0,0
+Dep003,2026-01-02,Platform,Staging,Compute Engine,31.0,310.0,Unknown,2026,1,1,Friday,0,185,0,0
+Dep004,2026-01-02,Data,Development,Cloud Functions,12.4,45.1,Cc-1004,2026,1,1,Friday,0,185,0,0
+Dep005,2026-01-03,Data,Production,Bigquery,88.1,695.25,Cc-1002,2026,1,1,Saturday,0,184,0,0
+Dep006,2026-01-03,Payments,Production,Cloud Sql,65.3,702.1,Cc-1006,2026,1,1,Saturday,0,184,0,0
+Dep007,2026-01-04,Platform,Production,Compute Engine,91.7,1411.25,Cc-1001,2026,1,1,Sunday,0,183,0,0
+Dep008,2026-01-05,Data,Staging,Bigquery,70.65,330.45,Unknown,2026,1,2,Monday,0,182,0,0
+Dep009,2026-01-06,Data,Development,Compute Engine,15.8,98.6,Cc-1004,2026,1,2,Tuesday,0,181,0,0
+Dep010,2026-01-06,Payments,Production,Bigquery,84.2,1022.7,Cc-1006,2026,1,2,Tuesday,0,181,0,0
+Dep011,2026-01-07,Platform,Production,Cloud Storage,70.65,490.15,Cc-1001,2026,1,2,Wednesday,0,180,0,0
+Dep012,2026-01-07,Data,Production,Compute Engine,79.9,1378.4,Cc-1002,2026,1,2,Wednesday,0,180,0,0
+Dep013,2026-01-08,Payments,Staging,Cloud Sql,28.6,275.6,Unknown,2026,1,2,Thursday,0,179,0,0
+Dep014,2026-01-08,Data,Production,Bigquery,90.4,1050.85,Cc-1004,2026,1,2,Thursday,0,179,0,0
+Dep015,2026-01-09,Platform,Development,Cloud Functions,9.7,695.25,Cc-1001,2026,1,2,Friday,0,178,0,0
+Dep016,2026-01-09,Data,Production,Compute Engine,76.3,1305.9,Cc-1002,2026,1,2,Friday,0,178,0,0
+Dep017,2026-01-10,Payments,Production,Cloud Storage,44.1,452.75,Cc-1006,2026,1,2,Saturday,0,177,0,0
+Dep018,2026-01-10,Platform,Staging,Compute Engine,70.65,120.3,Cc-1001,2026,1,2,Saturday,0,177,0,0
+Dep019,2026-01-11,Data,Production,Cloud Sql,68.8,688.4,Unknown,2026,1,2,Sunday,0,176,0,0
+Dep020,2026-01-11,Payments,Production,Bigquery,82.5,975.65,Cc-1006,2026,1,2,Sunday,0,176,0,0

@@ -446,6 +446,39 @@ python scripts/datetime_transformation.py
 
 ---
 
+## 🧮 LU13 Outlier Detection with Statistical Methods
+
+### Problem
+
+Outliers (such as unexpected cost spikes or transient CPU usage peaks) can skew baseline aggregations, capacity planning, and financial summaries. We need to identify these numerical outliers using multiple statistical approaches and apply business-aware handling rules without modifying the raw source data.
+
+### Outlier Detection Logic
+
+- **Z-Score Method**: Standard deviations from the mean ($|Z| > 3.0$) are used to identify extreme outliers.
+- **IQR (Interquartile Range) Method**: Computes the middle 50% boundary. Outliers are values outside $[Q1 - 1.5 \times IQR, Q3 + 1.5 \times IQR]$.
+
+### Outlier Handling Strategy
+
+| Column | Method | Action | Rationale |
+|---|---|---|---|
+| Monthly_Cost | Z-Score & IQR | Flag only | Cost spikes represent actual invoice charges; capping them would distort financial billing audit trails. |
+| CPU_Usage / CPU_Utilization | Z-Score & IQR | Cap (Winsorize) | CPU performance peaks are often transient; capping stabilizes capacity projection models. |
+
+### Run
+
+```bash
+python scripts/outlier_detection.py
+```
+
+### Output Reports
+
+- `reports/outlier_cleaning_log.md` — Detailed decision log with business justifications
+- `reports/outlier_detection_summary.csv` — Statistical bounds and outlier count summaries
+- `data/processed/cloud_cost_dataset_outliers.csv` — Fully cleaned dataset with outlier flag columns
+- **Script:** `scripts/outlier_detection.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
