@@ -387,6 +387,34 @@ python scripts/duplicate_deduplication.py
 
 ---
 
+## 🔤 LU11 String Cleaning & Text Normalisation
+
+String fields are prone to human error, resulting in spelling variations, unwanted whitespaces, and inconsistent casing. This prevents precise grouping and filtering. This unit standardises text formatting across all string columns.
+
+### Text Normalisation Steps
+
+1. **Whitespace Cleaning**: `str.strip()` applied to remove leading/trailing spaces.
+2. **Special Character Removal**: Unwanted characters (e.g. `@`, `#`, `$`, `%`, `&`, `*`, `!`) stripped via Regex.
+3. **Case Normalisation**: `str.title()` enforced for consistent casing.
+4. **Label Standardisation**: Known variants mapped to standard category names (e.g. `Aws` → `Amazon Web Services`).
+
+### Run
+
+```bash
+python scripts/string_cleaning.py
+```
+
+### Output Reports
+
+- `reports/string_columns_report.csv` — Datatype and unique values for each string column
+- `reports/text_normalisation_examples.csv` — Sample showing values before vs after normalisation
+- `reports/string_cleaning_summary.csv` — Quality summary of unique categories and changes
+- `docs/text_normalisation_strategy.md` — Detailed normalisation rules and mapping strategy
+- `data/processed/cloud_cost_dataset_text_cleaned.csv` — The fully cleaned dataset
+- **Script:** `scripts/string_cleaning.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
