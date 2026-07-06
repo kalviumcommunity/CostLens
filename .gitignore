@@ -69,3 +69,6 @@ data/processed/*
 
 # LU-12 Date & Time Transformation deliverables (tracked)
 !data/processed/cloud_cost_dataset_datetime_features.csv
+
+# LU-13 Outlier Detection deliverables (tracked)
+!data/processed/cloud_cost_dataset_outliers.csv
