@@ -1,0 +1,21 @@
+Deployment_ID,Deployment_Date,Billing_Date,Team_Name,Environment,Service_Name,Monthly_Cost,CPU_Utilization,Auto_Scaling_Enabled,Resource_Count,Cost_Center,deployment_year,deployment_month,deployment_week,deployment_day_of_week,deployment_hour,days_since_deployment,billing_year,billing_month,billing_week,billing_day_of_week,billing_hour,days_since_billing,cpu_year,cpu_month,cpu_week,cpu_day_of_week,cpu_hour,days_since_cpu
+Dep001,2026-01-01,2026-01-01,Platform,Production,Compute Engine,1240.5,1970-01-01 00:00:00.000000072,True,8,Cc-1001,2026,1,1,Thursday,0,186,2026,1,1,Thursday,0,186,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep002,2026-01-01,2026-01-01,Data,Production,Bigquery,910.2,1970-01-01 00:00:00.000000071,False,4,Cc-1002,2026,1,1,Thursday,0,186,2026,1,1,Thursday,0,186,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep003,2026-01-02,2026-01-02,Platform,Staging,Compute Engine,310.0,1970-01-01 00:00:00.000000031,True,3,Unknown,2026,1,1,Friday,0,185,2026,1,1,Friday,0,185,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep004,2026-01-02,2026-01-02,Data,Development,Cloud Functions,45.1,1970-01-01 00:00:00.000000012,False,1,Cc-1004,2026,1,1,Friday,0,185,2026,1,1,Friday,0,185,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep005,2026-01-03,2026-01-03,Data,Production,Bigquery,1022.7,1970-01-01 00:00:00.000000088,True,6,Cc-1002,2026,1,1,Saturday,0,184,2026,1,1,Saturday,0,184,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep006,2026-01-06,2026-01-06,Payments,Production,Cloud Sql,702.1,1970-01-01 00:00:00.000000065,True,5,Cc-1006,2026,1,2,Tuesday,0,181,2026,1,2,Tuesday,0,181,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep007,2026-01-04,2026-01-04,Platform,Production,Compute Engine,1411.25,1970-01-01 00:00:00.000000092,True,9,Cc-1001,2026,1,1,Sunday,0,183,2026,1,1,Sunday,0,183,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep008,2026-01-05,2026-01-05,Data,Staging,Bigquery,330.45,1970-01-01 00:00:00.000000071,False,3,Unknown,2026,1,2,Monday,0,182,2026,1,2,Monday,0,182,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep009,2026-01-06,2026-01-06,Data,Development,Compute Engine,98.6,1970-01-01 00:00:00.000000016,False,1,Cc-1004,2026,1,2,Tuesday,0,181,2026,1,2,Tuesday,0,181,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep010,2026-01-06,2026-01-06,Payments,Production,Bigquery,1022.7,1970-01-01 00:00:00.000000084,True,7,Cc-1006,2026,1,2,Tuesday,0,181,2026,1,2,Tuesday,0,181,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep011,2026-01-07,2026-01-07,Platform,Production,Cloud Storage,490.15,1970-01-01 00:00:00.000000071,True,4,Cc-1001,2026,1,2,Wednesday,0,180,2026,1,2,Wednesday,0,180,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep012,2026-01-06,2026-01-06,Data,Production,Compute Engine,1378.4,1970-01-01 00:00:00.000000080,True,8,Cc-1002,2026,1,2,Tuesday,0,181,2026,1,2,Tuesday,0,181,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep013,2026-01-08,2026-01-08,Payments,Staging,Cloud Sql,275.6,1970-01-01 00:00:00.000000029,False,2,Unknown,2026,1,2,Thursday,0,179,2026,1,2,Thursday,0,179,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep014,2026-01-08,2026-01-08,Data,Production,Bigquery,1050.85,1970-01-01 00:00:00.000000090,True,7,Cc-1004,2026,1,2,Thursday,0,179,2026,1,2,Thursday,0,179,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep016,2026-01-09,2026-01-09,Data,Production,Compute Engine,1305.9,1970-01-01 00:00:00.000000076,True,8,Cc-1002,2026,1,2,Friday,0,178,2026,1,2,Friday,0,178,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep017,2026-01-10,2026-01-10,Payments,Production,Cloud Storage,5600.0,1970-01-01 00:00:00.000000044,True,4,Cc-1006,2026,1,2,Saturday,0,177,2026,1,2,Saturday,0,177,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep018,2026-01-07,2026-01-07,Platform,Staging,Compute Engine,120.3,,False,2,Cc-1001,2026,1,2,Wednesday,0,180,2026,1,2,Wednesday,0,180,,,,,,
+Dep019,2026-01-11,2026-01-11,Data,Production,Cloud Sql,688.4,1970-01-01 00:00:00.000000069,True,5,Unknown,2026,1,2,Sunday,0,176,2026,1,2,Sunday,0,176,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep015,2026-01-09,2026-01-09,Platform,Development,Cloud Functions,1500.0,1970-01-01 00:00:00.000000010,False,1,Cc-1001,2026,1,2,Friday,0,178,2026,1,2,Friday,0,178,1970.0,1.0,1,Thursday,0.0,20640.0
+Dep020,2026-01-11,2026-01-11,Payments,Production,Bigquery,975.65,1970-01-01 00:00:00.000000082,True,6,Cc-1006,2026,1,2,Sunday,0,176,2026,1,2,Sunday,0,176,1970.0,1.0,1,Thursday,0.0,20640.0

@@ -1,0 +1,4 @@
+Column Name,Original Data Type,Sample Value
+Deployment_Date,str,2026-01-01
+Billing_Date,str,2026-01-01
+CPU_Utilization,float64,72.0

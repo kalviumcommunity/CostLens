@@ -415,6 +415,37 @@ python scripts/string_cleaning.py
 
 ---
 
+## 🕒 LU12 Date & Time Transformation Pipeline
+
+Raw timestamps are often insufficient for business reporting. This unit transforms string dates into robust time-series features to power trend aggregations, seasonality detection, and time-based metrics.
+
+### Transformation Steps
+
+1. **Timestamp Parsing**: Automatic identification and parsing of date columns to `datetime64`.
+2. **Feature Extraction**: Breaking down dates into dimensions: `Year`, `Month`, `Week Number`, `Day of Week`, and `Hour of Day`.
+3. **Time-Since-Event**: Calculating logical duration metrics (e.g., `days_since_deployment` relative to the current analysis date).
+4. **Time-Series Aggregation**: Aggregating key metrics (e.g. Monthly Cloud Cost and Weekly Deployments) by the extracted time dimensions.
+
+### Run
+
+```bash
+python scripts/datetime_transformation.py
+```
+
+### Output Reports & Visualisations
+
+- `reports/datetime_columns_report.csv` — Identified timestamp columns and original data types
+- `reports/day_of_week_distribution.csv` — Volume metrics sliced by day of the week
+- `reports/hour_of_day_distribution.csv` — Volume metrics sliced by time of day
+- `reports/time_series_aggregation.csv` — Pre-computed monthly and weekly aggregations
+- `outputs/monthly_trend_chart.png` — Visualisation of cloud cost over time
+- `outputs/weekly_activity_chart.png` — Visualisation of deployment velocity
+- `docs/datetime_feature_engineering.md` — Detailed breakdown of time features
+- `data/processed/cloud_cost_dataset_datetime_features.csv` — Fully enriched dataset with all time dimensions
+- **Script:** `scripts/datetime_transformation.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
