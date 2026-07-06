@@ -1,0 +1,8 @@
+Column Name,Data Type,Unique Values Count
+Deployment_ID,str,20
+Deployment_Date,str,11
+Billing_Date,str,11
+Team_Name,str,3
+Environment,str,3
+Service_Name,str,5
+Cost_Center,str,5

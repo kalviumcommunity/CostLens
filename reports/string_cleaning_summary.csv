@@ -1,0 +1,8 @@
+Column Name,Unique Categories Before,Unique Categories After,Total Replacements Made
+Deployment_ID,20,20,20
+Deployment_Date,11,11,0
+Billing_Date,11,11,0
+Team_Name,3,3,0
+Environment,3,3,0
+Service_Name,5,5,9
+Cost_Center,5,5,16
