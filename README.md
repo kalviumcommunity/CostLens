@@ -415,6 +415,39 @@ python scripts/string_cleaning.py
 
 ---
 
+## ✅ LU-14 — Data Consistency & Validation Rules
+
+Automated framework that decides whether an already-cleaned dataset is **safe for analysis**.
+It runs 7 independent validation rules against the deployments table (cross-checked against the
+projects reference table), isolates offending rows, and emits a scoreboard + executive summary.
+
+**Validation rules**
+
+1. Cost must be `>= 0`
+2. CPU Utilization in `[0, 100]`
+3. Memory Utilization in `[0, 100]`
+4. Deployment Date `<=` Incident Date
+5. `Project_ID` must exist in the projects table (referential integrity)
+6. No nulls in key columns (`Project_ID`, `Deployment_ID`)
+7. Cloud Provider ∈ `{AWS, Azure, GCP}`
+
+**Run**
+
+```bash
+python scripts/validate_data.py
+```
+
+**Inputs** — `data/cleaned/deployments.csv`, `data/cleaned/projects.csv`
+
+**Outputs**
+
+- `data/validation/invalid_records.csv` — every failing row, annotated with the broken rule(s)
+- `reports/validation_report.csv` — per-rule `Passed_Count`, `Failed_Count`, `Pass_Percentage`
+- `docs/lu14_validation_summary.md` — totals, results table, top failures, recommendations
+- **Script:** `scripts/validate_data.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
