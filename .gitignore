@@ -64,3 +64,11 @@ data/processed/*
 !outputs/cloud_costs_processed.csv
 !outputs/cloud_deployments_processed.csv
 
+# LU-11 String Cleaning & Text Normalisation deliverables (tracked)
+!data/processed/cloud_cost_dataset_text_cleaned.csv
+
+# LU-12 Date & Time Transformation deliverables (tracked)
+!data/processed/cloud_cost_dataset_datetime_features.csv
+
+# LU-13 Outlier Detection deliverables (tracked)
+!data/processed/cloud_cost_dataset_outliers.csv
