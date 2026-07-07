@@ -1,0 +1,11 @@
+Deployment_ID,Project_ID,Cloud_Provider,Cost,CPU_Utilization,Memory_Utilization,Deployment_Date,Incident_Date,Failed_Rules
+DEP011,PRJ001,AWS,-45.0,66,70,2026-01-11,2026-01-14,Rule 1 - Cost >= 0
+DEP012,PRJ002,GCP,500.0,140,65,2026-01-12,2026-01-13,"Rule 2 - CPU Utilization in [0,100]"
+DEP013,PRJ003,Azure,275.3,55,120,2026-01-13,2026-01-19,"Rule 3 - Memory Utilization in [0,100]"
+DEP014,PRJ004,AWS,880.0,40,50,2026-01-25,2026-01-10,Rule 4 - Deployment Date <= Incident Date
+DEP015,PRJ099,GCP,150.0,30,35,2026-01-15,2026-01-21,Rule 5 - Project_ID exists in projects
+DEP016,,AWS,420.0,48,52,2026-01-16,2026-01-22,Rule 5 - Project_ID exists in projects; Rule 6 - No nulls in key columns
+DEP017,PRJ001,Oracle,730.0,62,60,2026-01-17,2026-01-24,"Rule 7 - Cloud Provider in {AWS,Azure,GCP}"
+,PRJ002,AWS,610.5,58,63,2026-01-18,2026-01-26,Rule 6 - No nulls in key columns
+DEP019,PRJ003,Azure,,44,49,2026-01-19,2026-01-28,Rule 1 - Cost >= 0
+DEP020,PRJ004,GCP,340.0,-5,45,2026-01-20,2026-01-29,"Rule 2 - CPU Utilization in [0,100]"

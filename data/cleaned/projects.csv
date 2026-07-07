@@ -1,0 +1,6 @@
+Project_ID,Project_Name,Cost_Center
+PRJ001,Platform Core,CC-1001
+PRJ002,Data Analytics,CC-1002
+PRJ003,ML Inference,CC-1003
+PRJ004,Web Frontend,CC-1004
+PRJ005,Billing Service,CC-1005

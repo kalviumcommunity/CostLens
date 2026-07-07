@@ -1,0 +1,8 @@
+Rule_Name,Passed_Count,Failed_Count,Pass_Percentage
+Rule 1 - Cost >= 0,18,2,90.0
+"Rule 2 - CPU Utilization in [0,100]",18,2,90.0
+"Rule 3 - Memory Utilization in [0,100]",19,1,95.0
+Rule 4 - Deployment Date <= Incident Date,19,1,95.0
+Rule 5 - Project_ID exists in projects,18,2,90.0
+Rule 6 - No nulls in key columns,18,2,90.0
+"Rule 7 - Cloud Provider in {AWS,Azure,GCP}",19,1,95.0
