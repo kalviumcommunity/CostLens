@@ -1,0 +1,3 @@
+Deployment_ID,Project_ID,Deployment_Date,Deployment_Type
+DEP006,PRJ008,2026-01-06,Canary
+DEP007,PRJ010,2026-01-07,Rolling

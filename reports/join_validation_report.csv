@@ -1,0 +1,4 @@
+Join_Type,Left_Source,Right_Source,Rows_Before,Rows_After,Rows_Added,Rows_Lost
+INNER,billing_data,deployment_history,10,7,0,3
+LEFT,billing_data,deployment_history,10,10,0,0
+OUTER,billing_data,deployment_history,10,12,2,0
