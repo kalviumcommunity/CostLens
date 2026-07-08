@@ -72,3 +72,6 @@ data/processed/*
 
 # LU-13 Outlier Detection deliverables (tracked)
 !data/processed/cloud_cost_dataset_outliers.csv
+
+# LU-16 Feature Engineering deliverables (tracked)
+!data/processed/final_merged_dataset_features.csv

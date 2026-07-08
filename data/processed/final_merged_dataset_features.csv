@@ -1,0 +1,13 @@
+Project_ID,Resource_ID,Cloud_Provider,Monthly_Cost,Deployment_ID,Deployment_Date,Deployment_Type,Incident_ID,Incident_Date,Severity,Deployment_Recency_Days,Recency_Tier,Spend_Tier,Incident_Severity_Weight,Cost_Risk_Index,Cost_per_Risk_Unit
+PRJ001,RES1001,AWS,1240.5,DEP001,2026-01-01,Blue-Green,INC001,2026-01-05,High,31.0,Stale,High Spend,3.0,4962.0,310.125
+PRJ001,RES1001,AWS,1240.5,DEP001,2026-01-01,Blue-Green,INC007,2026-01-20,Low,31.0,Stale,High Spend,1.0,2481.0,620.25
+PRJ001,RES1002,AWS,320.0,DEP001,2026-01-01,Blue-Green,INC001,2026-01-05,High,31.0,Stale,Low Spend,3.0,1280.0,80.0
+PRJ001,RES1002,AWS,320.0,DEP001,2026-01-01,Blue-Green,INC007,2026-01-20,Low,31.0,Stale,Low Spend,1.0,640.0,160.0
+PRJ002,RES1003,GCP,910.2,DEP002,2026-01-02,Rolling,INC002,2026-01-09,Medium,30.0,Standard,High Spend,2.0,2730.6000000000004,303.40000000000003
+PRJ003,RES1004,Azure,430.0,DEP003,2026-01-03,Canary,INC003,2026-01-04,Low,29.0,Standard,Medium Spend,1.0,860.0,215.0
+PRJ004,RES1005,AWS,55.75,DEP004,2026-01-04,Rolling,,,,28.0,Standard,Low Spend,0.0,55.75,55.75
+PRJ005,RES1006,GCP,2100.0,DEP005,2026-01-05,Blue-Green,INC004,2026-01-06,Critical,27.0,Standard,High Spend,5.0,12600.0,350.0
+PRJ006,RES1007,Azure,760.1,,,,INC005,2026-01-15,Medium,,,Medium Spend,2.0,2280.3,253.36666666666667
+PRJ007,RES1008,AWS,180.0,,,,,,,,,Low Spend,0.0,180.0,180.0
+,RES1009,GCP,99.99,DEP008,2026-01-08,Blue-Green,,,,24.0,Standard,Low Spend,0.0,99.99,99.99
+PRJ009,RES1010,Azure,610.0,,,,,,,,,Medium Spend,0.0,610.0,610.0
