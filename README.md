@@ -415,6 +415,34 @@ python scripts/string_cleaning.py
 
 ---
 
+## 📊 LU16 Feature Engineering & Derived Business Columns
+
+### Problem
+
+Raw data columns lack business-meaningful context, making high-level decision-making difficult. We need to construct derived variables such as recency metrics, spending tiers, and composite risk scores to make data more readable and performant for downstream analysis.
+
+### Feature Engineering Logic
+
+- **Deployment Recency**: Calculates the days since deployment relative to a reference date.
+- **Recency Tiering**: Bins recency into `Recent` (<= 15 days), `Standard` (16-30 days), or `Stale` (> 30 days) using `pd.cut`.
+- **Spending Tiers**: Segments monthly cost into `Low Spend`, `Medium Spend`, or `High Spend` using `pd.qcut` (with custom fallback support).
+- **Cost Risk Score**: A composite score computed as $\text{Monthly\_Cost} \times (1 + \text{Severity\_Weight})$ to assess the financial cost of operational instability.
+
+### Run
+
+```bash
+python scripts/feature_engineering.py
+```
+
+### Output Reports
+
+- `reports/feature_engineering_summary.csv` — Descriptive statistics of all engineered features
+- `docs/lu16_feature_engineering_summary.md` — In-depth details of calculations, weightings, and Q&A
+- `data/processed/final_merged_dataset_features.csv` — Processed dataset enriched with derived business features
+- **Script:** `scripts/feature_engineering.py`
+
+---
+
 ## 🌐 Future Roadmap
 
 - 🤖 **AI Cost Advisor** — Ask natural language questions about your cloud spend
