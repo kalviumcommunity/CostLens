@@ -413,6 +413,35 @@ python scripts/string_cleaning.py
 - `data/processed/cloud_cost_dataset_text_cleaned.csv` — The fully cleaned dataset
 - **Script:** `scripts/string_cleaning.py`
 
+## 📊 LU19 Correlation & Relationship Analysis
+
+### Problem
+Identifying hidden relationships between operational, engagement, and business variables can unlock proactive optimization strategies. A simple metric check doesn't tell us *how* variables interact. This unit calculates linear and monotonic correlations across our data models to discover these relationships.
+
+### Correlation Implementation
+- **Pearson Correlation**: Finds linear relationships between continuous variables.
+- **Spearman Correlation**: Finds monotonic relationships, useful when the data isn't perfectly linear.
+- **Visualizations**: Annotated heatmaps built with Seaborn to provide easy visual scanning for business stakeholders.
+
+### Extracted Insights
+- **Cost Drivers**: Identified strong positive correlations between CPU Usage and Cloud Cost.
+- **Stability Issues**: Found that Incident Count and Deployment Count have a strong positive correlation, suggesting release processes need reliability checks. 
+- **Surprising Findings**: Showcased non-obvious moderate relationships, such as between Request Volume and Error Rates.
+
+### Run
+```bash
+python analysis/correlation_analysis.py
+```
+
+### Output Artifacts
+- `reports/pearson_correlation.csv`
+- `reports/spearman_correlation.csv`
+- `visualizations/pearson_heatmap.png`
+- `visualizations/spearman_heatmap.png`
+- `reports/correlation_report.md`
+- `data/processed/lu19_dataset.csv`
+- **Script:** `analysis/correlation_analysis.py`
+
 ---
 
 ## 📊 LU16 Feature Engineering & Derived Business Columns
