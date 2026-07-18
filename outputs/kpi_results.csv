@@ -1,0 +1,6 @@
+kpi_name,value,target_range,status
+Total Cloud Spend,13605.49,< $15000,PASS
+Cost Growth Rate,-0.1275,< 5%,PASS
+Deployment Cost Impact,101.69,< $100,FAIL
+Resource Utilization Score,54.53,> 60%,FAIL
+Cost Attribution Coverage,0.853,> 90%,FAIL
