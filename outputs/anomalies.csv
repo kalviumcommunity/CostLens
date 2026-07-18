@@ -1,0 +1,11 @@
+timestamp,metric_name,value,detection_method,severity,possible_cause
+2026-02-19,service_cost,600.0,Threshold (> 500),HIGH,Spike in expensive compute instances or sudden traffic surge.
+2026-04-15,service_cost,750.0,Threshold (> 500),HIGH,Spike in expensive compute instances or sudden traffic surge.
+2026-06-19,service_cost,520.0,Threshold (> 500),HIGH,Spike in expensive compute instances or sudden traffic surge.
+2026-03-01,resource_utilization_score,25.0,Threshold (< 40),MEDIUM,Massive over-provisioning or service outage reducing load.
+2026-04-12,resource_utilization_score,35.956452799455256,Threshold (< 40),MEDIUM,Massive over-provisioning or service outage reducing load.
+2026-04-30,resource_utilization_score,30.0,Threshold (< 40),MEDIUM,Massive over-provisioning or service outage reducing load.
+2026-01-30,deployment_count,18.0,Threshold (> 15),LOW,Major release day or automated CI/CD loop misconfiguration.
+2026-05-20,deployment_count,20.0,Threshold (> 15),LOW,Major release day or automated CI/CD loop misconfiguration.
+2026-07-18,service_cost,408.8067666635848,IQR Bound,HIGH,Statistically significant deviation beyond typical interquartile variance for service_cost.
+2026-05-18,resource_utilization_score,81.95871463647099,IQR Bound,HIGH,Statistically significant deviation beyond typical interquartile variance for resource_utilization_score.
